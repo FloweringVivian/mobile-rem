@@ -2,20 +2,20 @@
 移动端利用js根据屏幕宽度动态改变html的font-size，结合rem实现自适应
 
 ```javascript
-    <script>       
-        (function (doc, win) {   
-            var docEl = doc.documentElement,   
-            resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',   
-            recalc = function () {   
-	            var clientWidth = docEl.clientWidth;   
-	            if (!clientWidth) return;   
-	            docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';   
-	        };   
-	        if (!doc.addEventListener) return;   
-	        win.addEventListener(resizeEvt, recalc, false);   
-	        doc.addEventListener('DOMContentLoaded', recalc, false);   
-        })(document, window);   
- 	  </script>
+<script>       
+(function (doc, win) {   
+    var docEl = doc.documentElement,   
+    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',   
+    recalc = function () {   
+	var clientWidth = docEl.clientWidth;   
+	if (!clientWidth) return;   
+	docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';   
+    };   
+    if (!doc.addEventListener) return;   
+    win.addEventListener(resizeEvt, recalc, false);   
+    doc.addEventListener('DOMContentLoaded', recalc, false);   
+})(document, window);   
+</script>
 ```
 
 加入这么一段js，就可以根据屏幕的宽度动态改变font-size
