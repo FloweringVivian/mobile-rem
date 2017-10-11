@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" id="viewport" name="viewport">
+	<title>Document</title>
+	<style type="text/css">
+		/*公共部分样式*/
+		body, h1, h2, h3, h4, h5, h6, p, ul, ol, img, input, button, textarea{
+		    margin: 0;
+		    padding: 0;
+		    font:.6rem/1 "Microsoft Yahei", Arial, sans-serif;
+		    color: #353535;
+		}
+		html, body{
+			width: 100%;
+			height: 100%;
+		}
+		a{
+		    text-decoration: none;
+		    -webkit-tap-highlight-color: rgba(0,0,0,0);
+		}
+		a img, img{
+		    vertical-align: top;
+		    border: 0;
+		}
+		ul, li{
+		    list-style: none;
+		}
+		h1, h2, h3, h4, h5, h6{
+		    font-weight: normal;		   
+		}
+		input,textarea{
+		    outline: none;
+		    -webkit-appearance:none;
+		}
+		.clearfix:after{
+		    display: block;
+		    clear: both;
+		    height: 0;
+		    line-height: 0;
+		    overflow: hidden;
+		    content: "";
+		}
+		.clearfix{
+		    zoom:1;
+		}
+		.border-box{
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			box-sizing: border-box;
+		}
+		.fl{
+			float: left;
+		}
+		.fr{
+			float: right;
+		}
+		.tl{
+			text-align: left;
+		}
+		.tc{
+			text-align: center;
+		}
+		.tr{
+			text-align: right;
+		}
+		/*非公共部分样式*/
+		.box{
+			padding: 1rem .5rem;
+		}
+		.box h1{
+			font-size: .9rem;
+			color: #30b49a;
+			margin-bottom: 1rem;
+		}
+		.box li{
+			margin-bottom: .5rem;
+		}
+		.box li input{
+			height: 1.6rem;
+			line-height: 1.6rem;
+			font-size: .7rem;
+		}
+		.box li:first-child input, .box li:last-child input{
+			width: 100%;
+		}
+		.box li:nth-child(2) input{
+			width: 48%;
+		}
+		.box li input[type="text"]{
+			border: 0;
+		    background: #108c80;
+		    border-radius: 4px;
+		    color: #5fbeb5;
+		    text-indent: 10px;
+		}
+		.box li input[type="button"]{
+			background: #ffa336;
+		    color: #fff;
+		    border: 0;
+		    border-radius: 4px;		   
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<h1 class="tc">参与活动领取奖励</h1>
+		<ul>
+			<li>
+				<input type="text" placeholder="手机号">
+			</li>
+			<li class="clearfix">
+				<input class="fl" type="text" placeholder="手机验证码">
+				<input class="fr" type="button" value="获取手机验证码">
+			</li>
+			<li>
+				<input type="button" value="提交">
+			</li>
+		</ul>
+		
+	</div>
+	<script>       
+        (function (doc, win) {   
+            var docEl = doc.documentElement,   
+            resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',   
+            recalc = function () {   
+	            var clientWidth = docEl.clientWidth;   
+	            if (!clientWidth) return;   
+	            docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';   
+	        };   
+	        if (!doc.addEventListener) return;   
+	        win.addEventListener(resizeEvt, recalc, false);   
+	        doc.addEventListener('DOMContentLoaded', recalc, false);   
+        })(document, window);   
+ 	</script>
+</body>
+</html>
