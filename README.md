@@ -31,3 +31,5 @@ iphone6宽度是375px，那么font-size就是23.4375px,如果设置1rem就是23.
 demo效果请查看rem.html
 
 
+
+
